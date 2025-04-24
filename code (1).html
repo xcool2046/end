@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full w-full"> <!-- Ensure html also takes full height/width -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO: Primary Title with Keyword -->
+    <!-- Kept for browser tab and search results, even if not displayed on page -->
+    <title>Play Monster Survivors Online</title>
+    
+    <!-- SEO: Meta Description with Keywords -->
+    <!-- Kept for search engine snippets -->
+    <meta name="description" content="Play Monster Survivors online for free! Battle endless waves of monsters and survive directly in your browser. Full-screen action!">
+    
+    <!-- SEO: Canonical URL -->
+    <link rel="canonical" href="https://www.monstersurvivors.com/">
+    
+    <!-- SEO: Open Graph Meta Tags (optional, but good for sharing) -->
+    <meta property="og:title" content="Play Monster Survivors Online">
+    <meta property="og:description" content="Full-screen online survival action: Play Monster Survivors now!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.monstersurvivors.com/">
+    <!-- <meta property="og:image" content="https://www.monstersurvivors.com/images/og-image.jpg"> -->
+    
+    <!-- Favicon (Optional) -->
+    <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+    
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Custom CSS for full screen and reset -->
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrolling */
+        }
+        /* Basic font stack - less visible now but good practice */
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        }
+        /* Ensure iframe and its container take full viewport */
+        #game-wrapper {
+            width: 100vw; /* 100% of viewport width */
+            height: 100vh; /* 100% of viewport height */
+            position: fixed; /* Fix position to cover the whole viewport */
+            top: 0;
+            left: 0;
+            /* Ensure it's above potential default body margins */
+            z-index: 10; 
+        }
+        #game-iframe {
+            width: 100%;
+            height: 100%;
+            display: block; /* Remove potential extra space below iframe */
+        }
+    </style>
+</head>
+
+<body class="h-full w-full bg-black"> <!-- Set body to full size, black background for seamless transition -->
+
+    <!-- Game Embed Wrapper - Takes full screen -->
+    <div id="game-wrapper">
+        <!-- Game Iframe -->
+        <iframe
+            id="game-iframe"
+            src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; fullscreen; gamepad;;"
+            loading="eager" <!-- Change to eager if you want it to load ASAP -->
+        ></iframe>
+    </div>
+
+    <!-- No other content here -->
+
+</body>
+</html>
